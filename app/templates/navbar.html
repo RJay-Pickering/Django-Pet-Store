@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="{% static "images/pet_finder.jpg" %}"
+    type="image/jpg">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    {% comment %}
+    <link rel="stylesheet" href="{% static 'css/pet.css' %}" />
+    {% endcomment %}
+    <script src="{% static 'js/main.js' %}" defer></script>
+    <script src="{% static 'js/pet_cards.js' %}" defer></script>
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    {% comment %} petfinder api javascript {% endcomment %}
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+    {% comment %} ------------------------ {% endcomment %}
+  </head>
+  <body>
+    <div class="nav-on-top">
+      <div class="navbar">
+        <img class="logo-img" src="{% static "images/pet_finder.jpg" %}">
+        <p class="web-name">Apawcalyptic Partners</p>
+        <a href="/" class="nav-buttons">Home</a>
+        <a href="" class="nav-buttons">Local Centers</a>
+        {%comment %} drop downs {% endcomment %}
+        <p class="nav-buttons drop_down">Search Types</p>
+        <p class="nav-buttons drop_down">Filter</p>
+        {% comment %} --------- {% endcomment %} {% comment %}{% endcomment %}
+        {% comment %} animated dog html {% endcomment %} {% comment %}
+        <div class="doggo">
+          <div class="🐕">
+            <div class="torso">
+              <div class="fur">
+                <div class="spot"></div>
+              </div>
+              <div class="neck">
+                <div class="fur"></div>
+                <div class="head">
+                  <div class="fur">
+                    <div class="snout"></div>
+                  </div>
+                  <div class="ears">
+                    <div class="ear">
+                      <div class="fur"></div>
+                    </div>
+                    <div class="ear">
+                      <div class="fur"></div>
+                    </div>
+                  </div>
+                  <div class="eye"></div>
+                </div>
+                <div class="collar"></div>
+              </div>
+              <div class="legs">
+                <div class="leg">
+                  <div class="fur"></div>
+                  <div class="leg-inner">
+                    <div class="fur"></div>
+                  </div>
+                </div>
+                <div class="leg">
+                  <div class="fur"></div>
+                  <div class="leg-inner">
+                    <div class="fur"></div>
+                  </div>
+                </div>
+                <div class="leg">
+                  <div class="fur"></div>
+                  <div class="leg-inner">
+                    <div class="fur"></div>
+                  </div>
+                </div>
+                <div class="leg">
+                  <div class="fur"></div>
+                  <div class="leg-inner">
+                    <div class="fur"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tail">
+                <div class="tail">
+                  <div class="tail">
+                    <div class="tail -end">
+                      <div class="tail">
+                        <div class="tail">
+                          <div class="tail">
+                            <div class="tail"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endcomment %} {% comment %} ----------------- {% endcomment %}
+      </div>
+    </div>
+    {% comment %} -------- where all information goes -------- {% endcomment %}
+    {% block content %} {% endblock content %}
+    {% comment %} -------------------------------------------- {% endcomment %}
+  </body>
+</html>
