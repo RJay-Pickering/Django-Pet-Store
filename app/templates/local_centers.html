@@ -1,11 +1,10 @@
 {% extends "navbar.html" %} 
 {% block content %}
-
-  {% comment %} ------------- startup page content ------------- {% endcomment %}
+    {% comment %} ------------- startup page content ------------- {% endcomment %}
   <div id="allPets">
     <div class="main_content">
-      <h1 class="header">All Adoptable Animals</h1>
-      <div id="apiContent"></div>
+      <h1 class="header">Animals in Your State</h1>
+      <div id="localContent"></div>
       <input
         type="number"
         name="page"
@@ -44,5 +43,4 @@
     </div>
   </div>
   {% comment %} ------------------------------------------------ {% endcomment %}
-
 {% endblock content %}

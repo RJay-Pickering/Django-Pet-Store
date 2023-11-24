@@ -13,6 +13,7 @@
     {% endcomment %}
     <script src="{% static 'js/main.js' %}" defer></script>
     <script src="{% static 'js/pet_cards.js' %}" defer></script>
+    <script src="{% static "js/localCenter.js" %}" defer></script>
 
     <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -32,9 +33,9 @@
         <img class="logo-img" src="{% static "images/pet_finder.jpg" %}">
         <p class="web-name">Apawcalyptic Partners</p>
         <a href="/" class="nav-buttons">Home</a>
-        <a href="" class="nav-buttons">Local Centers</a>
+        <a href="{% url "Local" %}" class="nav-buttons">Local</a>
         {%comment %} drop downs {% endcomment %}
-        <p class="nav-buttons drop_down">Search Types</p>
+        <p class="nav-buttons drop_down">Search</p>
         <p class="nav-buttons drop_down">Filter</p>
         {% comment %} --------- {% endcomment %} {% comment %}{% endcomment %}
         {% comment %} animated dog html {% endcomment %} {% comment %}

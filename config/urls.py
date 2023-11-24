@@ -20,4 +20,5 @@ from app.views import *
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home_page),
+    path("/local", local_centers, name="Local")
 ]
