@@ -14,6 +14,7 @@
     <script src="{% static 'js/main.js' %}" defer></script>
     <script src="{% static 'js/pet_cards.js' %}" defer></script>
     <script src="{% static "js/localCenter.js" %}" defer></script>
+    <script src="{% static "js/search.js" %}" defer></script>
 
     <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -35,8 +36,9 @@
         <a href="/" class="nav-buttons">Home</a>
         <a href="{% url "Local" %}" class="nav-buttons">Local</a>
         {%comment %} drop downs {% endcomment %}
-        <p class="nav-buttons drop_down">Search</p>
+        <p class="nav-buttons drop_down" id="showSearchDropDown">Search</p>
         <p class="nav-buttons drop_down">Filter</p>
+        
         {% comment %} --------- {% endcomment %} {% comment %}{% endcomment %}
         {% comment %} animated dog html {% endcomment %} {% comment %}
         <div class="doggo">
@@ -110,6 +112,25 @@
         {% endcomment %} {% comment %} ----------------- {% endcomment %}
       </div>
     </div>
+
+    <div class="search_dropdown" id="searchDropdown">
+      {% comment %} ‘dog', 'cat', 'rabbit', 'small-furry', 'horse', 'bird', 'scales-fins-other', 'barnyard’ {% endcomment %}
+      <a href="{% url "search" animal="dog" %}" class="drpdwn_context">dog</a>
+      <a href="{% url "search" animal="cat" %}" class="drpdwn_context">cat</a>
+      <a href="{% url "search" animal="rabbit" %}" class="drpdwn_context">rabbit</a>
+      <a href="{% url "search" animal="horse" %}" class="drpdwn_context">horse</a>
+      <a href="{% url "search" animal="bird" %}" class="drpdwn_context">bird</a>
+      <a href="{% url "search" animal="barnyard" %}" class="drpdwn_context">barnyard</a>
+      <a href="{% url "search" animal="small-furry" %}" class="drpdwn_context">small animals</a>
+      <a href="{% url "search" animal="scales-fins-other" %}" class="drpdwn_context">other</a>
+    </div>
+
+    <script>
+      document.getElementById("showSearchDropDown").addEventListener("click", () => {
+        document.getElementById("searchDropdown").classList.toggle("show_dropdown")
+      })
+    </script>
+
     {% comment %} -------- where all information goes -------- {% endcomment %}
     {% block content %} {% endblock content %}
     {% comment %} -------------------------------------------- {% endcomment %}

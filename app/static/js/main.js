@@ -46,6 +46,7 @@ submitBtn.addEventListener("click", () => {
 
 // --------------------------- Closing the pet card ---------------------------
 closeSingleView.addEventListener("click", () => {
+    console.log("test")
     mainContent.style.display = null
     showSpecificPets.style.display = "none"
     closeSingleView.style.display = "none"
@@ -85,7 +86,6 @@ switchPages(startPage)
 function switchPages(page) {
     pf.animal.search({page})
         .then(function (response) {
-            console.log(response.data)
             pageTotal = response.data.pagination.total_pages
             pageElement.max = pageTotal
             for (let i = 0; i < response.data.animals.length; i++) {

@@ -71,8 +71,6 @@ fetch('https://extreme-ip-lookup.com/json/?key=d792bptqQXNELxWdMyyU')
     
     var st = getStateAbbr(state)
     
-    console.log(st)
-    
     fetch('https://api.petfinder.com/v2/oauth2/token', {
       method: 'POST',
       body: `grant_type=client_credentials&client_id=${myApiKey}&client_secret=${apiSecret}`,
@@ -85,15 +83,13 @@ fetch('https://extreme-ip-lookup.com/json/?key=d792bptqQXNELxWdMyyU')
       const access_token = data.access_token;
     
       // Search for pets in Arkansas
-      fetch(`https://api.petfinder.com/v2/animals?location=${st}`, {
+      fetch(`https://api.petfinder.com/v2/animals?location=${st}&limit=100`, {
         headers: {
           'Authorization': `Bearer ${access_token}`
         }
       })
       .then(response => response.json())
       .then(data => {
-        pageTotal = data.pagination.total_pages
-        pageElement.max = pageTotal
         for (let i = 0; i < data.animals.length; i++) {
             // ---- Refer to line 113 in "localCenter.js" ----
             createLocalPetCards(data.animals[i])
@@ -112,8 +108,6 @@ fetch('https://extreme-ip-lookup.com/json/?key=d792bptqQXNELxWdMyyU')
 })
 
 function createLocalPetCards(animal) {
-    console.log(animal)
-
     // --------------- created HTML elements ---------------
     let infoCard = document.createElement("div")
     let photos = document.createElement("img")
@@ -205,3 +199,18 @@ function createLocalPetCards(animal) {
     apiContent.appendChild(infoCard)
     // -----------------------------------------------------
 }
+
+// --------------------------- Closing the pet card ---------------------------
+var closeSingleView = document.getElementById("closeBtn")
+
+closeSingleView.addEventListener("click", () => {
+    console.log("test")
+    mainContent.style.display = null
+    showSpecificPets.style.display = "none"
+    closeSingleView.style.display = "none"
+
+    // ----- Refer to line 309 in "pet_cards.js" -----
+    resetSingularView(showSpecificPets)
+    // -----------------------------------------------
+})
+// ----------------------------------------------------------------------------

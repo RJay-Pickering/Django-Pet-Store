@@ -1,10 +1,21 @@
-{% extends "navbar.html" %} 
+{% extends "navbar.html" %}
 {% block content %}
-    {% comment %} ------------- startup page content ------------- {% endcomment %}
-  <div id="allPets">
+<p style="display: none;" id="searchedAnimal">{{animal}}</p>
+
+{% comment %} ------------- startup page content ------------- {% endcomment %}
+<div id="allPets">
     <div class="main_content">
-      <h1 class="header">100 Newest Animals in Your State</h1>
-      <div id="localContent"></div>
+      <h1 class="header">All Searched Animals</h1>
+      <div id="searchContent"></div>
+      <input
+        type="number"
+        name="page"
+        id="pageId"
+        value="1"
+        onKeyDown="return false"
+        min="1"
+      />
+      <button type="submit" id="subBtn">SUBMIT</button>
     </div>
   </div>
   {% comment %} ------------------------------------------------ {% endcomment %}

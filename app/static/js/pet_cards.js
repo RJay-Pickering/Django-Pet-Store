@@ -1,7 +1,5 @@
 // ------------------------ Shows all pets on the page ------------------------
 function createPetCards(animal) {
-    console.log(animal)
-
     // --------------- created HTML elements ---------------
     let infoCard = document.createElement("div")
     let photos = document.createElement("img")

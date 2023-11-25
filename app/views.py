@@ -7,3 +7,6 @@ def home_page(request: HttpRequest) -> render:
 
 def local_centers(request: HttpRequest) -> render:
     return render(request, "local_centers.html")
+
+def search_animal(request: HttpRequest, animal: str) -> render:
+    return render(request, "search.html", {"animal": animal})

@@ -20,5 +20,6 @@ from app.views import *
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home_page),
-    path("/local", local_centers, name="Local")
+    path("/local", local_centers, name="Local"),
+    path("/search/<str:animal>", search_animal, name="search")
 ]
