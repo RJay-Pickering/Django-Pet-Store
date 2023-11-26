@@ -16,7 +16,7 @@ Functionality:
         Will ask the user to put in their city and state and it should return all animals in their city and state 
         (additional function: could show all animals in the specific state after showing the initial query of animals)
     Filter:
-        Will filter by age, shots given, house_trained, if they have special needs, gender, status, tags, and/or size
+        Will filter by age, if shots given, house_trained, if they have special needs, gender, status, tags, and/or size
 
 
 
