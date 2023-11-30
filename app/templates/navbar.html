@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Apawcalyptic Partners</title>
+    <link rel="shortcut icon" href="{% static "images/pet_finder.jpg" %}"
+    type="image/jpg">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    {% comment %}
+    <link rel="stylesheet" href="{% static 'css/pet.css' %}" />
+    {% endcomment %}
+    <script src="{% static 'js/main.js' %}" defer></script>
+    <script src="{% static 'js/pet_cards.js' %}" defer></script>
+    <script src="{% static "js/localCenter.js" %}" defer></script>
+    <script src="{% static "js/search.js" %}" defer></script>
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    {% comment %} petfinder api javascript {% endcomment %}
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+    {% comment %} ------------------------ {% endcomment %}
+  </head>
+  <body>
+    <div class="nav-on-top">
+      <div class="navbar">
+        <img class="logo-img" src="{% static "images/pet_finder.jpg" %}">
+        <p class="web-name">Apawcalyptic Partners</p>
+        <a href="/" class="nav-buttons">Home</a>
+        <a href="{% url "Local" %}" class="nav-buttons">Local</a>
+        {%comment %} drop downs {% endcomment %}
+        <p class="nav-buttons drop_down" id="showSearchDropDown">Search</p>
+        {% comment %} <a href="{% url "filter" %}" class="nav-buttons">Filter</a> {% endcomment %}
+        
+        {% comment %} --------- {% endcomment %} {% comment %}{% endcomment %}
+        {% comment %} animated dog html {% endcomment %} {% comment %}
+        <div class="doggo">
+          <div class="🐕">
+            <div class="torso">
+              <div class="fur">
+                <div class="spot"></div>
+              </div>
+              <div class="neck">
+                <div class="fur"></div>
+                <div class="head">
+                  <div class="fur">
+                    <div class="snout"></div>
+                  </div>
+                  <div class="ears">
+                    <div class="ear">
+                      <div class="fur"></div>
+                    </div>
+                    <div class="ear">
+                      <div class="fur"></div>
+                    </div>
+                  </div>
+                  <div class="eye"></div>
+                </div>
+                <div class="collar"></div>
+              </div>
+              <div class="legs">
+                <div class="leg">
+                  <div class="fur"></div>
+                  <div class="leg-inner">
+                    <div class="fur"></div>
+                  </div>
+                </div>
+                <div class="leg">
+                  <div class="fur"></div>
+                  <div class="leg-inner">
+                    <div class="fur"></div>
+                  </div>
+                </div>
+                <div class="leg">
+                  <div class="fur"></div>
+                  <div class="leg-inner">
+                    <div class="fur"></div>
+                  </div>
+                </div>
+                <div class="leg">
+                  <div class="fur"></div>
+                  <div class="leg-inner">
+                    <div class="fur"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tail">
+                <div class="tail">
+                  <div class="tail">
+                    <div class="tail -end">
+                      <div class="tail">
+                        <div class="tail">
+                          <div class="tail">
+                            <div class="tail"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endcomment %} {% comment %} ----------------- {% endcomment %}
+      </div>
+    </div>
+
+    <div class="search_dropdown" id="searchDropdown">
+      {% comment %} ‘dog', 'cat', 'rabbit', 'small-furry', 'horse', 'bird', 'scales-fins-other', 'barnyard’ {% endcomment %}
+      <a href="{% url "search" animal="dog" %}" class="drpdwn_context">dog</a>
+      <a href="{% url "search" animal="cat" %}" class="drpdwn_context">cat</a>
+      <a href="{% url "search" animal="rabbit" %}" class="drpdwn_context">rabbit</a>
+      <a href="{% url "search" animal="horse" %}" class="drpdwn_context">horse</a>
+      <a href="{% url "search" animal="bird" %}" class="drpdwn_context">bird</a>
+      <a href="{% url "search" animal="barnyard" %}" class="drpdwn_context">barnyard</a>
+      <a href="{% url "search" animal="small-furry" %}" class="drpdwn_context">small animals</a>
+      <a href="{% url "search" animal="scales-fins-other" %}" class="drpdwn_context">other</a>
+    </div>
+
+    <script>
+      document.getElementById("showSearchDropDown").addEventListener("click", () => {
+        document.getElementById("searchDropdown").classList.toggle("show_dropdown")
+        var content = document.getElementsByClassName("drpdwn_context")
+        for (let i = 0; i < content.length; i++) {
+          content[i].classList.toggle("show_dropdown")
+        }
+      })
+    </script>
+
+    {% comment %} -------- where all information goes -------- {% endcomment %}
+    {% block content %} {% endblock content %}
+    {% comment %} -------------------------------------------- {% endcomment %}
+  </body>
+</html>

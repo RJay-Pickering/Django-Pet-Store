@@ -1,0 +1,55 @@
+{% extends "navbar.html" %}
+{% block content %}
+<p style="display: none;">{{filteredItems}}</p>
+<form>
+    <label>
+        <h2>age?</h2>
+        <input type="text" required name="user_name"></input>
+        <button>Enter</button>
+    </label>
+</form>
+
+{% comment %} ------------- startup page content ------------- {% endcomment %}
+<div id="allPets">
+    <div class="main_content">
+      <h1 class="header">All Adoptable Animals</h1>
+      <div id="apiContent"></div>
+      <input
+        type="number"
+        name="page"
+        id="pageId"
+        value="1"
+        onKeyDown="return false"
+        min="1"
+      />
+      <button type="submit" id="subBtn">SUBMIT</button>
+    </div>
+  </div>
+  {% comment %} ------------------------------------------------ {% endcomment %}
+
+
+  {% comment %} -------------- view an single pet -------------- {% endcomment %}
+  <i class="fa fa-long-arrow-left fa-2x" aria-hidden="true" id="closeBtn"></i>
+  <div class="petInfo2" id="petInfo2">
+    <div class="map">
+      <div id="map"></div>
+      <div class="map-c">
+        <center>
+          <h1 id="pet_name" title="Pet name"></h1>
+          <p id="breed" title="Breed"></p>
+          <p id="types" title="Age, gender, size, and color"></p>
+          <p id="health" title="Medical info"></p>
+        </center>
+        <div class="det" id="address" title="Address"></div>
+        <div class="det" id="state" title="City and State"></div>
+        <div class="det" id="phoneNum" title="Phone number"></div>
+        <div class="det" id="website" title="Website url"></div>
+        <center>
+          <a id="directions" target="_blank" title="Google Maps"></a>
+          <a id="email" target="_blank" title="Email"></a>
+        </center>
+      </div>
+    </div>
+  </div>
+  {% comment %} ------------------------------------------------ {% endcomment %}
+{% endblock content %}
