@@ -20,7 +20,8 @@ from app.views import *
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home_page),
-    path("/local", local_centers, name="Local"),
-    path("/search/<str:animal>", search_animal, name="search"),
-    path("/filter", filter_pets, name="filter")
+    path("local", local_centers, name="Local"),
+    path("search/<str:animal>", search_animal, name="search"),
+    path("donate", donation, name="donate"),
+    path("filter", filter_pets, name="filter")
 ]

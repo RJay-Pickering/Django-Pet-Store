@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Donate for pets</title>
+        <link rel="stylesheet" href="{% static "css/donation.css" %}">
+    </head>
+
+    <body>
+        <form class="donate" action="" method="GET">
+            <div class="donate-black">
+                <h2><span><img src="{% static "images/pet_finder.jpg" %}"></span>Apawcalyptic Partners</h3>
+                <p>Your contribution is vital to the success of our initiative.<br>Choose the amount you wish to donate with paypal, for a one-time payment to support our cause. </p>
+            </div>
+            <div class="donate-blue">
+                <h3>Donation amount</h3>
+                <div class="donate-amount-box">
+                <div class="donate-amount">
+                    <div class="denomination selected">
+                    <input autocomplete="off" type="radio" name="amount" id="amount5" value="5" checked="">
+                    <label for="amount5">$5</label>
+                    </div>
+                    <div class="denomination">
+                    <input autocomplete="off" type="radio" name="amount" id="amount10" value="10">
+                    <label for="amount10">$10</label>
+                    </div>
+                    <div class="denomination">
+                    <input autocomplete="off" type="radio" name="amount" id="amount15" value="15">
+                    <label for="amount15">$15</label>
+                    </div>
+                    <div class="denomination">
+                    <input autocomplete="off" type="radio" name="amount" id="amount25" value="25">
+                    <label for="amount25">$25</label>
+                    </div>
+                    <div class="denomination">
+                    <input autocomplete="off" type="radio" name="amount" id="amount50" value="50">
+                    <label for="amount50">$50</label>
+                    </div>
+                    <div class="denomination">
+                    <input autocomplete="off" type="radio" name="amount" id="amount100" value="100">
+                    <label for="amount100">$100</label>
+                    </div>
+                </div>
+                <div class="denomination-other">
+                    <input autocomplete="off" type="text" name="amountOther" value="" placeholder="Enter Other Amount">
+                    </div>
+                </div>
+            </div>
+            <div class="donate-blue donate-payment">
+                <h3>Payment Method</h3>
+                <div>
+                    <label>
+                        <input type="radio" name="payment" value="paypal" checked="checked" autocomplete="off">PayPal
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" value="dogecoin" autocomplete="off">Dogecoin
+                    </label>
+                </div>
+                <div class="donate-submit">
+                    <button type="submit" autocomplete="off">Donate $5</button>
+                </div>
+            </div>
+        </form>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="{% static "js/donate.js" %}" defer></script>
+    </body>
+</html>

@@ -1,8 +1,8 @@
 // source: https://extreme-ip-lookup.com/
 fetch('https://extreme-ip-lookup.com/json/?key=d792bptqQXNELxWdMyyU')
 .then( res => res.json())
-.then(response => {
-    // var state = response.region;
+.then(data => {
+    // var state = data.region;
     // due to wifi having its own vpn type thing, this will do for presentation
     var state = "Mississippi"
     console.log(state)
