@@ -27,7 +27,12 @@ SECRET_KEY = "django-insecure-f49p%bh7dd%fhn1)-a_$=tg9+)v468zfm9!7sg3efwz5)b_7k2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS: List = ["apawcalyptic-partners.onrender.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS: List = [
+    "apawcalyptic-partners.onrender.com",
+    "apawcalyptic-partners.vercel.app",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
