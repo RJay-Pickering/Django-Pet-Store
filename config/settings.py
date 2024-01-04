@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS: List = [
     "apawcalyptic-partners.onrender.com",
-    "apawcalyptic-partners.vercel.app",
+    ".vercel.app",
     "localhost",
     "127.0.0.1",
 ]
