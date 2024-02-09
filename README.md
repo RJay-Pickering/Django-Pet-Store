@@ -2,17 +2,18 @@
   <img style="width: 30%;" src="https://github.com/RJay-Pickering/Django-Pet-Store/blob/main/app/static/images/pet_finder.jpg" alt="Apawcalyptic Partners">  
   
   # Apawcalyptic Partners
-
-</div>
   
-## Project Description
+  ## Project Description
 
-## color codes
-
-## display gif of demo here at 100% width
+  ## Color Pallete
+  <img style="width: 50%;" src="https://github.com/RJay-Pickering/Django-Pet-Store/blob/main/README-FIles/Apawcalyptic%20Partners.png" alt="Color Codes"> 
+  
+  ## demo
+  <img style="width: 50%;" src="https://github.com/RJay-Pickering/Django-Pet-Store/blob/main/README-FIles/demo.gif" alt="DEMO"> 
+</div>
 
 ## Inspiration
-The biggest inspiration for this project was the [Missing Cats of America](https://github.com/RJay-Pickering/Missing-Cats-of-America) project that I did. This 
+The biggest inspiration for this project was the [Missing Cats of America](https://github.com/RJay-Pickering/Missing-Cats-of-America) project that I did. 
 
 ## how to use (Visual Studio Code)
 1.  Install [Python](https://www.youtube.com/watch?v=gTcKMLznTcI) and [Django](https://www.youtube.com/watch?v=8JBdPDkKMiA) to your computer
