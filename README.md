@@ -50,3 +50,4 @@
 12. Go to [localhost](http://127.0.0.1:8000/) through the browser to view the project running
 
 ## **LICENSE**
+BSD 3-Clause License
