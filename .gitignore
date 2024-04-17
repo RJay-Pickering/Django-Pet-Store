@@ -1,2 +1,4 @@
 db.sqlite3
+.DS_Store
+requirements.txt
 original-secret-key.txt
